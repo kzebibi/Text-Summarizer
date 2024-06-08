@@ -1,1 +1,14 @@
-key: value
+TrainingArguments:
+  overwrite_output_dir: True # Overwrite existing output directory (optional)
+  num_train_epochs: 1  # Number of training epochs
+  per_device_train_batch_size: 1  # Batch size per training GPU/TPU
+  save_steps: 10000  # Save model checkpoint every N steps
+  save_total_limit: 2  # Maximum number of checkpoints to save
+  logging_steps: 500  # Log training information every N steps
+  evaluation_strategy: steps  # Evaluate model performance after each epoch
+  metric_for_best_model: loss  # Metric to monitor for early stopping (minimize loss)
+  load_best_model_at_end: True  # Load the best model based on the monitored metric
+  warmup_steps: 500  # Number of warmup steps for learning rate scheduler
+  learning_rate: 2e-5  # Learning rate for the optimizer
+  adam_epsilon: 1e-8  # Epsilon for Adam optimizer
+  weight_decay: 0.01  # Weight decay for optimizer
