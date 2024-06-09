@@ -33,7 +33,7 @@ pip install -r requirements.txt
 pip install --upgrade accelerate
 pip uninstall -y transformers accelerate
 pip install transformers accelerate
-pip uninstall fsspec
+pip uninstall -y fsspec
 pip install fsspec==2023.6.0
 ```
 
