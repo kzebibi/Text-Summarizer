@@ -58,7 +58,7 @@ class ConfigurationManager:
         return data_transformation_config
     
     
-    def get_model_trainer_config(self):
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
         config = self.config.model_trainer
         params = self.params.TrainingArguments
         create_directories([config.root_dir])
@@ -66,6 +66,7 @@ class ConfigurationManager:
             root_dir = config.root_dir,
             data_path = config.data_path,
             model_ckpt = config.model_ckpt,
+            overwrite_output_dir = config.overwrite_output_dir,
             num_train_epochs = params.num_train_epochs,
             per_device_train_batch_size= config.per_device_train_batch_size,
             save_steps = config.save_steps,
@@ -81,6 +82,7 @@ class ConfigurationManager:
         )
         
         return model_trainer_config
+
     
     
     def get_model_evaluation_config(self):

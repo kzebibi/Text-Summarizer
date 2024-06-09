@@ -45,24 +45,24 @@ except Exception as e:
 
 
 
-# STAGE_NAME = "MODEL_TRAINER_PIPELINE"
-# try:
-#     logging.info(f'Running {STAGE_NAME}')
-#     model_trainer_pipeline = ModelTrainerPipeline()
-#     model_trainer_pipeline.run()
-#     logging.info(f'Completed {STAGE_NAME}')
-# except Exception as e:
-#     logging.error(f'Error in {STAGE_NAME}')
-#     logging.error(e)
-#     raise e
+STAGE_NAME = "MODEL_TRAINER_PIPELINE"
+try:
+    logging.info(f'Running {STAGE_NAME}')
+    model_trainer_pipeline = ModelTrainerPipeline()
+    model_trainer_pipeline.run()
+    logging.info(f'Completed {STAGE_NAME}')
+except Exception as e:
+    logging.error(f'Error in {STAGE_NAME}')
+    logging.error(e)
+    raise e
     
-# STAGE_NAME = "MODEL_TRAINER_PIPELINE"
-# try:
-#     logging.info(f'Running {STAGE_NAME}')
-#     model_trainer_pipeline = ModelEvaluattionPipeline()
-#     model_trainer_pipeline.run()
-#     logging.info(f'Completed {STAGE_NAME}')
-# except Exception as e:
-#     logging.error(f'Error in {STAGE_NAME}')
-#     logging.error(e)
-#     raise e
+STAGE_NAME = "MODEL_TRAINER_PIPELINE"
+try:
+    logging.info(f'Running {STAGE_NAME}')
+    model_trainer_pipeline = ModelEvaluattionPipeline()
+    model_trainer_pipeline.run()
+    logging.info(f'Completed {STAGE_NAME}')
+except Exception as e:
+    logging.error(f'Error in {STAGE_NAME}')
+    logging.error(e)
+    raise e
