@@ -1,10 +1,10 @@
-## Text Summarizer: Using BERT-large-CNN for Text Summarization
+## Text Summarizer: Using facebook/bart-large-cnn for Text Summarization
 
-This project implements a text summarizer using Facebook's powerful BERT-large-CNN model in a PyTorch framework. The project focuses on providing an efficient and effective solution for summarizing textual content.
+This project implements a text summarizer using Facebook's powerful BART-large-CNN model in a PyTorch framework. The project focuses on providing an efficient and effective solution for summarizing textual content.
 
 ### Features
 
-- **BERT-large-CNN model:** Utilizes the advanced BERT-large-CNN model for accurate summarization.
+- **Facebook/bart-large-cnn model:** Utilizes the advanced BART-large-CNN model for accurate summarization.
 - **PyTorch framework:** Leverages the flexibility and efficiency of the PyTorch library.
 - **Modular structure:** Organized into distinct pipelines for data ingestion, validation, transformation, training, and evaluation.
 - **Web application:** Provides a user-friendly web interface for text summarization.
@@ -69,4 +69,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ### Acknowledgments
 
-This project leverages Facebook's BERT-large-CNN model and the PyTorch framework. The code structure and implementation draw inspiration from the provided code snippet.
+This project leverages Facebook's BART-large-CNN model and the PyTorch framework. The code structure and implementation draw inspiration from the provided code snippet.
