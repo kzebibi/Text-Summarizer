@@ -10,16 +10,32 @@ from src.entity import (
 
 
 class ConfigurationManager:
+    """
+    This class is responsible for managing configurations for different stages of the machine learning pipeline.
+    """
+
     def __init__(
         self, config_file_path=CONFIG_FILE_PATH, params_file_path=PARAMS_FILE_PATH
     ):
+        """
+        Initialize the ConfigurationManager with paths to the configuration and parameters files.
 
+        Args:
+        config_file_path (str): Path to the configuration file.
+        params_file_path (str): Path to the parameters file.
+        """
         self.config = read_yaml(config_file_path)
         self.params = read_yaml(params_file_path)
 
         create_directories([self.config.artifacts_root])
 
     def get_data_ingestion_config(self):
+        """
+        Get the configuration for data ingestion.
+
+        Returns:
+        DataIngestionConfig: Configuration for data ingestion.
+        """
         config = self.config.data_ingestion
         create_directories([config.root_dir])
 
@@ -32,6 +48,12 @@ class ConfigurationManager:
         return data_ingestion_config
 
     def get_data_validation_config(self) -> DataValidationConfig:
+        """
+        Get the configuration for data validation.
+
+        Returns:
+        DataValidationConfig: Configuration for data validation.
+        """
         config = self.config.data_validation
 
         create_directories([config.root_dir])
@@ -45,6 +67,12 @@ class ConfigurationManager:
         return data_validation_config
 
     def get_data_transformation_config(self) -> DataTransfomationConfig:
+        """
+        Get the configuration for data transformation.
+
+        Returns:
+        DataTransfomationConfig: Configuration for data transformation.
+        """
         config = self.config.data_transformation
         create_directories([config.root_dir])
         data_transformation_config = DataTransfomationConfig(
@@ -55,6 +83,12 @@ class ConfigurationManager:
         return data_transformation_config
 
     def get_model_trainer_config(self) -> ModelTrainerConfig:
+        """
+        Get the configuration for model training.
+
+        Returns:
+        ModelTrainerConfig: Configuration for model training.
+        """
         config = self.config.model_trainer
         params = self.params.TrainingArguments
         create_directories([config.root_dir])
@@ -80,6 +114,12 @@ class ConfigurationManager:
         return model_trainer_config
 
     def get_model_evaluation_config(self):
+        """
+        Get the configuration for model evaluation.
+
+        Returns:
+        ModelEvaluationConfig: Configuration for model evaluation.
+        """
         config = self.config.model_evaluation
 
         create_directories([config.root_dir])
